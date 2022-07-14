@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBjeto Console</title>
+</head>
+<body>
+    
+<script>
+    console.log(console)
+    console.error("esto es un error");
+    console.warn("Esto es un Aviso");
+    console.info("Es simplemente para dar información")
+    console.log("log es un registro de lo que ha pasado en nuestra aplicacion");
+
+    let nombre = "Leo",
+    apellido = "Brabo",
+    edad = 26;
+
+    // podemos separarlos por comas:
+    console.log(nombre,apellido,edad);
+
+    // mensaje interpolando las variables
+    console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} `);
+
+    //podemos pasar como comidines que represente cierto caracteres
+    // %s representa una cadena
+    // %d representa un numero
+    
+    console.log(`Hola mi nombre es %s %s y tengo %d`,nombre,apellido,edad);
+
+    //para limpiar lo que está en la consola:
+    
+    console.clear();
+
+    //objeto global windows, que es del navegador
+    console.log(window);
+
+    //el document es la representación del documento html a traves de js:
+    console.log(document);
+
+    //para ver el contenido del document utilizamos:
+    //cuando queremos representar un elemento como si fuera un objeto de JS, para poder ver todo sus métodos y atributos, utilzamos dir
+    console.dir(document)
+
+    //podemos hacer grupos en la consola:
+    console.group("Los cursos de @JonMircha:");
+    console.log("Curso de JavaScript");
+    console.log("Curso de Node.js");
+    console.log("Curso de HTML y CSS");
+
+    //para indicar cuando termina el grupo usamos:
+    console.groupEnd()
+
+    //en este caso con Brave groupCollapsed y group se ven igual.
+    console.groupCollapsed("Los cursos de @JonMircha:");
+    console.log("Curso de JavaScript");
+    console.log("Curso de Node.js");
+    console.log("Curso de HTML y CSS");
+
+    console.groupEnd();
+
+    //ppodemos hacer que las entradas de un objeto se represente como en una tabla:
+
+    console.table(Object.entries(console)); 
+    //usamos el contructor Object y el método entries para que me vaya generando una fila por cada propiedad que tenga el objeto console.
+
+    //si yo quiero representar mis arreglo u objetos en forma de tabla en la consola:
+
+    const numeros = [1,2,3,4,5],
+        vocales = ["a","e","i","o","u"];
+    
+    console.table(numeros);
+    console.table(vocales);
+
+    //En el caso de los Objetos para verlos en formato tabla:
+    const perro ={
+        nombre: "Pepin",
+        raza: "Boxer",
+        color:"morado"
+    };
+    console.table(perro);
+
+    console.clear();
+
+    //método time
+    console.time("Alias de tiempo");
+    const arreglo= Array(1000000);
+    for(let i = 0;i < arreglo.length;i++){
+        arreglo[i] = i;
+    }
+    //para cronometrar cuanto tarda toda esta parte de codigo ponemos ahora:
+    console.timeEnd("Alias de tiempo");
+    //el mensaje de time y timeEnd deben ser los mismo para que funcione y retorne el tiempo que tarda la seccion de codigo
+
+
+    //Para ver cuantas veces se ejecuta un codigo: con console.count:
+
+    for(let i=0; i<10;i++){
+        console.count("Código for:"); //alias o etiqueta
+        console.log(i);
+    }
+
+    
+    //para hacer pruebas con assert
+    let x = 3,
+    y = 2,
+    pruebaXY = "Se espera que X siempre sea menor que Y"
+
+    console.assert(x<y,{x,y,pruebaXY})
+
+
+
+</script>  
+</body>
+</html>

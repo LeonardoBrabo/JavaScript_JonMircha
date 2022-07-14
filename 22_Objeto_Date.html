@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto_date</title>
+</head>
+<body>
+    
+    <script>
+        console.log(Date);
+
+        /*Asignando a una variable podemos ver
+        la fecha y hora actual deasde la ejecución*/
+        let fecha = new Date();
+        console.log(fecha)
+
+        //con el método getDate(); toma el día del mes, en tipo number
+        console.log(fecha.getDate());
+
+        /*getDay nos devuelve el día de la semana
+         D L M M J V S = 0 1 2 3 4 5 6 como si fuera un arreglo
+         */
+        console.log(fecha.getDay());
+
+        /*Nos devuelve el mes actual, basado en un arreglo:
+        Ene Feb Marz Abri May Jun Jul Ago Sep Oct Nov Dic
+        0    1   2    3    4   5   6   7   8   9  10  11*/
+        console.log(fecha.getMonth());
+
+        /*getYear me devuelve el año actual*/
+        console.log(fecha.getYear());
+        /*Este método no suele ser muy util
+        porque el 2022 nos da 120 lo mejor seria usar el
+        siguiente método:*/
+
+        console.log(fecha.getFullYear());
+        /*Ahora si podemos visualizar el año correctamente*/
+
+        /*Podemos obtener también la hora, los minutos
+        y los segundos:
+        */
+
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+
+        /*También podemos obtener los milisegundos*/
+        console.log(fecha.getMilliseconds());
+
+        /*Podemos obtener tambien la fecha y la hora
+        de una forma más facil de reconocer a la hora de
+        visualizarla:*/
+
+        console.log(fecha.toString());
+
+        /*Puedo obtener solamente la fecha de una forma
+        entendible o más completa con:*/
+
+        console.log(fecha.toDateString());
+
+        /*Para obtener la fecha y la hora en un formato
+        más legible:*/
+        console.log(fecha.toLocaleString());
+
+        /*También podria conseguir solo la hora en un
+        formato más legible*/
+        console.log(fecha.toLocaleTimeString());
+
+        /*También podria conseguir solo la fecha en un
+        formato más legible*/
+        console.log(fecha.toLocaleDateString());
+
+        /*Para obtener el Huso horario: GTO-0300 en 
+        Argentina*/
+
+        console.log(fecha.getTimezoneOffset());
+        //nos da 180 MINUTOS que son 3 horas
+
+        /*Para obtener la hora de Huso 00 el standar
+        del meridiano de greenwich*/
+        console.log(fecha.getUTCHours());
+        console.log(fecha.getUTCDate()); //ver el dia en la zona UTC O
+
+        /*time stamp: el número que genera representa cuantos
+        segundos pasaron desde el 1 de enero de 1970,
+        la fecha time Stamp: se utiliza cuando vas a guardar algun
+        registro en alguna base de datos, los diferente gestores
+        de base de datos tienen tipos de datos preparados para
+        recibir este tipo de fecha en este formato. */
+        console.log(Date.now());
+
+        /*Una libreria muy potente para manejar* los tiempos en
+        JS es MomentJS */
+
+        let cumpleLeo = new Date(1995,10,28); //10 es Nov en el arreglo
+        console.log(cumpleLeo);
+        
+
+
+        
+
+
+    </script>
+</body>
+</html>

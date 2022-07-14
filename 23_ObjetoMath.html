@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto_Math</title>
+</head>
+<body>
+    
+<script>
+
+    console.log(Math);
+
+    /*el método abs del objeto Math*, valor absoluto */
+    console.log(Math.abs(-7.8));
+
+    /*ya trae ciertos numeros como PI*/
+    console.log(Math.PI);
+    
+    /*Métodos para redondear:*/
+    console.log(Math.ceil(7.8)); //redondea para arriba siempre
+    console.log(Math.floor(7.8)); //redondea para abajo siempre
+    console.log(Math.round(7.6)); //redondea al mas cercanoInmediato
+    
+    /*Sacar la raiz cuadrada de un Numero: */
+    console.log(Math.sqrt(81));
+    
+    //Sacar la potencia .pow(numero,exponente):
+    console.log(Math.pow(2,5));
+
+    //Indica si el numero es negativo, 0 o positivo.
+    console.log(Math.sign(-7.6)); //da -1 indica negativo
+    console.log(Math.sign(7.6)); // da 1 indica positivo
+    console.log(Math.sign(0)); // da 0
+    
+    //Método random, me da un numero aleatorio entre 0 y 1:
+    console.log(Math.random());
+    
+    /*si necesito que me de entre un numero y otro distinto
+    de 1 y 0*/
+    console.log(Math.random()*1000); //entre 0 y 1000.
+
+    //para quitar la parte decimal podemos usar un metodo de redondeo:
+    console.log(Math.round(Math.random()*1000));
+    
+    
+
+    
+    
+
+</script>
+</body>
+</html>
