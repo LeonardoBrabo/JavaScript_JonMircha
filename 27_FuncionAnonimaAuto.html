@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Anonimas Autoejecutables</title>
+</head>
+<body>
+<script>
+        
+    // alert("Hola"); // es una funcion con nombre y que se autoejecuta a la vez
+
+// función anónima Autoejecutable:
+ (function (){
+    console.log("mi primer funcion anom ejecutable");
+})(); //el segundo parentesis es el que ejecuta la función
+
+(function(d,w,c){
+    console.log("mi segunda funcion anom ejecutable");
+    console.log(d);
+    c.log("Este es un console.log");
+ })(document,window,console);
+
+
+ // FORMA DE ESCRIBIR LAS FUNCIONES ANÓNIMA:
+
+ //CLASICA
+ (function(){
+      console.log('version clasica')  
+ })();
+
+
+ //LA CROCKFORD (JavaScript the good Parts);
+ ((function(){
+    console.log('version Crockford');
+ })());
+
+
+ //UNARIA
+ +function(){
+    console.log('version unaria');
+ }();
+
+ //FACEBOOK
+ !function(){
+    console.log('version Facebook');
+ }();
+
+
+
+
+
+</script>
+</body>
+</html>

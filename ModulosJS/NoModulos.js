@@ -1,0 +1,1 @@
+console.log("Mi navegador no soporto Módulos +ES6")

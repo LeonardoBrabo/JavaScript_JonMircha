@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert-Confirm-Prompt</title>
+</head>
+<body>
+    
+
+    <script>
+        //una cuadro emergente, con un boton aceptar, y el mensaje.
+       
+        //window.alert("Hola estoy es un alerta");
+
+        //window.confirm("Esto es una confirmación");
+
+        //window.prompt("esto es un prompt y permite al usuario ingresar un valor");
+
+        let alerta = alert("esto es una alerta"),
+         confirmacion = confirm("esto es una confirmación"),
+         aviso = prompt("Hola esto es un aviso y le permite al usario ingresar un valor");
+
+        console.log(alerta);  //undefined
+        console.log(confirmacion); //true boton aceptar / false si boton cancelar
+        console.log(aviso);  //el valor ingresado / si no acepta regresa null
+
+
+    </script>
+</body>
+</html>
