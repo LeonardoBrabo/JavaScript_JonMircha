@@ -12,4 +12,11 @@ método join(); agrega el contenido de un arreglo a un string, con el argumento 
 
 
 //probando con recursividad:
-//(proximamente);
+
+function invertirCadena(cad) {
+    if (cad === "")
+      return "";
+    else
+      return invertirCadena(cad.substr(1)) + cad.charAt(0);
+  }
+  console.log(invertirCadena("hola"));

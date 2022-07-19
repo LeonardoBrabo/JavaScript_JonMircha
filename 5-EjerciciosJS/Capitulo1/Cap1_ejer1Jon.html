@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 1 - Cap1 por JonMircha</title>
+</head>
+<body>
+    <h1>Ejercicio 1 Cap 1 Version JonMircha</h1>
+<script>
+    //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+        //------------------------------------[Version de JonMircha]----------------------------------
+
+        /*
+function contarCaracteres(cadena = ""){
+    if(!cadena){
+        console.warn("No ingresaste ninguna cadena");
+    }else{
+        console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+    }
+}
+
+*/
+
+//funcion expresada con formato arrow function y un operador ternario.
+
+const contarCaracteres = (cadena = "") => 
+    (!cadena)
+        ? console.warn("No ingresaste ninguna cadena")
+        : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+contarCaracteres();
+contarCaracteres("Hola Mundo");
+</script>
+</body>
+</html>

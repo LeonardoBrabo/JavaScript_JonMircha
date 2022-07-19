@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 4 - Cap1 por JonMircha</title>
+</head>
+<body>
+    
+    <h1>Ejercicio 4 Cap 1 Version JonMircha</h1>
+<script>
+    //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+        //------------------------------------[Version de JonMircha]----------------------------------
+    
+        const repetirTexto = (texto = "", veces = undefined ) => {
+
+            if(!texto) return console.warn("No ingresaste texto");
+
+            if(veces === undefined) return console.warn("No ingresaste las veces de repeticion");
+
+            if (veces === 0) return console.error("El número de veces no puede ser cero");
+
+            if(Math.sign(veces) === -1 ) return console.error("El número de veces no puede ser negativo");
+
+            for(let i= 1; i<= veces;i++) console.info(`${texto}, ${i}`);
+            
+        }
+    
+        repetirTexto("Hola mundo",3);
+        repetirTexto("Hola mundo",0);
+        repetirTexto("HOla mundo",-13);
+        repetirTexto("",20);
+        repetirTexto("Hola mundo");
+
+</script>
+</body>
+</html>

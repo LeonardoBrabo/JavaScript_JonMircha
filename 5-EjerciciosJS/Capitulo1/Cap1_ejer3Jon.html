@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 3 - Cap1 por JonMircha</title>
+</head>
+<body>
+    
+    <h1>Ejercicio 3 Cap 1 Version JonMircha</h1>
+<script>
+    //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+        //------------------------------------[Version de JonMircha]----------------------------------
+
+        const CadenaAArreglo = (cadena = "",separador = undefined) =>
+        (!cadena)
+            ? console.warn("No ingresaste una cadena de texto")
+            : (separador === undefined)
+                ? console.warn("No ingresaste el caracter separador")
+                : console.info(cadena.split(separador));
+
+    CadenaAArreglo("Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime pariatur voluptatem itaque, error dolore corrupti consequuntur, molestias, nihil repellendus exercitationem similique nulla magnam dicta! Nemo repellendus eaque deserunt maxime."," ");
+    CadenaAArreglo();
+    CadenaAArreglo("Hola Mundo");
+
+</script>
+</body>
+</html>
