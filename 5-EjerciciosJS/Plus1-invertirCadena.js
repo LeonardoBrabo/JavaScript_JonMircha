@@ -7,7 +7,7 @@ console.log(palabra.split("").reverse().join(""));
 /*método split(): convierte en un arreglo el string, sin agregar parametros agrega todo el string como un solo elemento, con el argumento
     ("") , le digo que separe cada letra en una posicion.
 método reverse(): permite cambiar el orden de los elemento de un arreglo (solo de un arreglo no de un string)
-método join(); agrega el contenido de un arreglo a un string, con el argumento (""), nos elementos se unen entre si.
+método join(); agrega el contenido de un arreglo a un string, con el argumento (""), los elementos se unen entre si.
 */
 
 
