@@ -40,14 +40,14 @@ const esPrimo = (numero) =>{
 
 }
 
-// esPrimo(1);
-// esPrimo(2);
-// esPrimo(113);
-// esPrimo(22);
-// esPrimo(4);
-// esPrimo("HOla mundo");
-// esPrimo();
-// esPrimo(7.4);
+esPrimo(1);
+esPrimo(2);
+esPrimo(113);
+esPrimo(22);
+esPrimo(4);
+esPrimo("HOla mundo");
+esPrimo();
+esPrimo(7.4);
 
 
 
