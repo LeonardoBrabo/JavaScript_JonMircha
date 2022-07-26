@@ -13,3 +13,23 @@ const aniosPasados = (anio,mes,dia) =>{
 
 aniosPasados(1995,11,28);
 */
+
+const getEdad = (fecha)=>{
+    let fechaActual = new Date();
+
+    let fechaIngresada = new Date(fecha);
+
+    let edad = fechaActual.getFullYear() - fechaIngresada.getFullYear();
+
+    let diferenciaMes = fechaActual.getMonth() - fechaIngresada.getMonth();
+
+    let diferenciaDia = fechaActual.getDay() - fechaIngresada.getDay();
+
+
+    if(diferenciaMes < 0 || diferenciaMes === 0 && diferenciaDia < 0){
+        edad--;
+    }
+    return console.log(`${edad} años, hoy ${fechaActual.toLocaleDateString()}`);
+}
+
+getEdad("1995/11/28")
