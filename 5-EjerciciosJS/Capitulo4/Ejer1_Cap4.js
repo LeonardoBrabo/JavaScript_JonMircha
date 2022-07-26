@@ -21,11 +21,11 @@ numPrimo(117);
 
 //version dividendo hasta la mitad del numero ingresado, si da exacta, no es un número primo
 
-const esPrimo = (numero) =>{
+const esPrimo = (numero = undefined) =>{
     //Casos Especiales
     if(!numero) return console.log("No ingreso ningun Numero");
     if(typeof numero !== "number") return console.log("lo que ingreso no es un numero.");
-    if(Math.sign(numero) === -1) return console.log("No deberia ingrar numero negativos");
+    if(Math.sign(numero) === -1) return console.log("No deberia ingresar numero negativos");
 
     numero = Math.floor(numero); //por si ingresa un numero no entero le redondeamos.
 
