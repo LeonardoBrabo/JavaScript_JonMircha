@@ -11,6 +11,8 @@ const aplicarDescuento = (monto= undefined,descuento=undefined)=>{
     if(Math.sign(monto)=== -1) return console.log("solo debe ingresar numeros enteros positivos en el monto")
     if(Math.sign(descuento)=== -1) return console.log("solo debe ingresar numeros enteros positivos en el descuento")
 
+    if(monto === 0) return console.error("El monto no puede ser 0");
+
     
     
     let valorDescuento = Math.floor((descuento*monto)/100);

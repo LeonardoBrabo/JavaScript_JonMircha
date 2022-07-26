@@ -34,4 +34,7 @@ function calcularEdad(fecha){
     return Math.abs(fecha.getUTCFullYear() - 1970);
 }
 
-console.log(calcularEdad(new Date(1995,11,28)));
+// el mes 10 corresponde a noviembre en Date.
+console.log(calcularEdad(new Date(1995,10,28)));
+
+console.log(new Date(1995,10,28));
