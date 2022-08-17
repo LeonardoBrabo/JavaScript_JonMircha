@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Object</title>
+</head>
+<body>
+    <h1>El Objeto This y call_apply_bind</h1>
+    <script> 
+    
+        console.log(this);
+        this.lugar = "Contexto Global";
+        
+        function saludar(){
+            console.log(`${this.lugar}`);
+        }
+        
+        saludar();
+        
+        const obj ={
+            lugar: "Contexto Objeto"
+        }
+        
+        //call llama al contexto del obj en vez del objeto global
+        saludar.call(obj)
+        
+        saludar.apply(obj)
+
+        function saludar2(saludo,aQuien){
+            console.log(`${saludo} ${aQuien} desde el ${this.lugar}`)
+        }
+        saludar.call(obj)
+
+        saludar2("hola","Leonardo");
+        saludar2.call(obj,"Holis","Sabri")
+        saludar2.apply(obj,["Adios","Mircha"])
+
+        //bind
+         
+        const persona = {
+            nombre: "Leonardo",
+            saludar: function(){
+                console.log(`Hola ${this.nombre}`)
+            }
+        }
+
+        persona.saludar()
+    
+        const otraPersona = {
+            saludar: persona.saludar.bind(persona), //enlaza el contexto de persona
+        }
+
+        otraPersona.saludar();
+
+
+    </script>
+</body>
+</html>
